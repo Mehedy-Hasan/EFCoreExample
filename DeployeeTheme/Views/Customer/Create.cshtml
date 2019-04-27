@@ -1,0 +1,47 @@
+﻿@model Models.Customer
+@{
+    Layout = "_MyLayout";
+    
+}
+
+
+<div class="container">
+    
+    <form method="post">
+
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" asp-for="Name" />
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" asp-for="Email" />
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input class="form-control" asp-for="Phone" />
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input class="form-control" asp-for="Address" />
+        </div>
+        <div class="form-group">
+            <label>Country</label>
+            <select class="form-control" asp-for="Country" asp-items="ViewBag.CountryList">
+                <option>..Select..</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <select class="form-control" asp-for="Gender" asp-items="@ViewBag.GenderList">
+                <option>..Select..</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-success" />
+        </div>
+    </form>
+    
+</div>
+
+
